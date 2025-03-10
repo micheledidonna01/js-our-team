@@ -72,14 +72,14 @@ function cardGenerator(container, team) {
 /****************
 BONUS
 ****************/
-
 let form = document.getElementById('newCard');
 
 form.addEventListener('submit', newCard);
 
 function newCard(event) {
     event.preventDefault();
-
+    let newCardArray = [];
+    
     let name = document.getElementById('name').value;
     let role = document.getElementById('role').value;
     let email = document.getElementById('email').value;
@@ -87,7 +87,8 @@ function newCard(event) {
 
     let obj = { name, role, email, src };
     teamMembers.push(obj);
+    newCardArray.push(obj);
     console.log(teamMembers);
-    cardGenerator(container, teamMembers);
+    cardGenerator(container, newCardArray);
     form.reset();
 }
