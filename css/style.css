@@ -74,3 +74,27 @@ CORPO
     cursor: pointer;
 }
 
+/****************
+BONUS
+****************/
+
+/* MEDIUM */
+@media screen and (max-width: 768px) {
+    /***********
+    CORPO
+    ***********/
+    .card{
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+
+/* SMALL */
+@media screen and (max-width: 576px) {
+    /***********
+    CORPO
+    ***********/
+    .card{
+        width: 100%;
+    }
+}
