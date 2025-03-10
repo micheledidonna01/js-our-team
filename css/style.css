@@ -75,7 +75,7 @@ CORPO
 }
 
 /****************
-BONUS
+BONUS 1
 ****************/
 
 /* MEDIUM */
@@ -97,4 +97,33 @@ BONUS
     .card{
         width: 100%;
     }
+}
+
+/****************
+BONUS 2
+****************/
+/*Form*/
+
+#newCard{
+    text-align: center;
+    margin: 40px auto;
+}
+
+.block{
+    margin: 10px;
+}
+
+.block input{
+    border-radius: 5px;
+    height: 20px;
+}
+
+.block input[ type = 'submit']{
+    height: 30px;
+}
+
+.block input[ type = 'submit']:hover{
+    cursor: pointer;
+    background-color: #BD295D;
+    color: #FFFFFF;
 }

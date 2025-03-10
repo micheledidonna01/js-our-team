@@ -38,11 +38,11 @@ const teamMembers = [
 ];
 
 let container = document.querySelector('.container');
-cardGenerator(teamMembers);
-function cardGenerator(team){
+cardGenerator(container, teamMembers);
+function cardGenerator(container, team) {
 
-    for(let i=0; i<team.length; i++){
-        container.innerHTML +=`
+    for (let i = 0; i < team.length; i++) {
+        container.innerHTML += `
 <div class="card">
     <div class="images">
         <img src=${team[i].img} alt=${team[i].name}>
@@ -65,3 +65,29 @@ function cardGenerator(team){
   <p class="email"></p>
 </div> 
 */
+
+
+
+
+/****************
+BONUS
+****************/
+
+let form = document.getElementById('newCard');
+
+form.addEventListener('submit', newCard);
+
+function newCard(event) {
+    event.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let role = document.getElementById('role').value;
+    let email = document.getElementById('email').value;
+    let src = document.getElementById('source').value;
+
+    let obj = { name, role, email, src };
+    teamMembers.push(obj);
+    console.log(teamMembers);
+    cardGenerator(container, teamMembers);
+    form.reset();
+}
