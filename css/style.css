@@ -1,7 +1,7 @@
 body{
     margin: 0 30px;
+    font-family: "Fredoka", sans-serif;
 }
-
 
 /************
 INTESTAZIONE
@@ -9,6 +9,7 @@ INTESTAZIONE
 
 header{
     text-align: center;
+    margin: 0 30px;
 }
 
 h1{
@@ -20,28 +21,34 @@ CORPO
 ***********/
 
 .container{
-    display: d-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc((100% - 60px) / 3);
     gap:30px;
-    justify-content: space-between;
 }
 .card{
-    display: d-flex;
-    flex-wrap: nowrap;
+    display: flex;
     flex-direction: row;
     background-color: #000000;
     color:#FFFFFF;
+    width: calc((100% - 60px) / 3);
+    /* width: 200px; */
 }
 
 .card .images{
-    flex-grow: 1;
+    width: 40%;
 }
+.card .images img{
+    width: 100%;
+    height: 100%;
+} 
 
 .card .description{
     padding: 10px;
-    flex-grow:3;
+    /* flex-grow:3; */
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .card .description .name{
@@ -56,4 +63,11 @@ CORPO
 
 .card .description .email{
     color: #6BCBFB;
+    font-size: 12px;
+    word-wrap:break-word;
 }
+
+.card .description .email:hover{
+    cursor: pointer;
+}
+
